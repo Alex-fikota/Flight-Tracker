@@ -9,14 +9,12 @@ import { getLocaleDateFormat } from '@angular/common';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'apiData';
-  newData=any;
-  constructor(private _datiService:DatiService) {
-    } 
-   
-    ngOnInit(){
-      this._datiService.getFlightSpecific().subscribe(res=>{
-        this._datiService=res;
-      })
-    }
+title = 'Tracker';
+Datiservice=[]
+constructor(private user:DatiService){
+  this.user.getData().subscribe(DatiService=>{
+    console.warn(DatiService)
+ 
+  })
+}
 }
